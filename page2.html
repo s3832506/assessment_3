@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Quiet Night In</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+  </head>
+
+  <body>
+
+    <img src="images/livingroom.png" width="50%" alt="livingroom" class="image">
+
+
+    <button onclick="typeWriter()" style="justify-content: center;">READ PROMPT</button>
+
+<p id="story" style="text-align:center"></p>
+
+    <script>
+      var i = 0;
+      var txt = 'You find yourself in the living room, where you find everything is as normal. But something seems off still.';
+      var speed = 50;
+            
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("story").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      </script>
+
+    <p style="text-align:center">
+      <a href="page4.html">GO OUTSIDE</a>
+      <a href="page6.html">CHECK THE KITCHEN</a>
+  </p>
+
+  </body>
+
+</html>

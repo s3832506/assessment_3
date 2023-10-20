@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Quiet Night In</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+  </head>
+
+  <body>
+
+    <img src="images/readingbook.png" width="50%" alt="readingbook" class="image">
+
+
+    <button onclick="typeWriter()" style="justify-content: center;">READ PROMPT</button>
+
+<p id="story" style="text-align:center"></p>
+
+    <script>
+      var i = 0;
+      var txt = 'You look further through the ritual site, finding a book relating to this activity and a particular passage of note in it. Suddenly a loud groaning sound is heard coming into the kitchen.';
+      var speed = 50;
+            
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("story").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      </script>
+
+    <p style="text-align:center">
+      <a href="page8.html">TURN AROUND</a>
+  </p>
+
+  </body>
+
+</html>

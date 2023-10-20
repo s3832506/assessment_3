@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Quiet Night In</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+  </head>
+
+  <body>
+
+    <img src="images/skeleton.png" width="50%" alt="bedroom" class="image">
+
+    <img src="images/game over title.png" width="50%" alt="gameover" class="image">
+
+
+    <button onclick="typeWriter()" style="justify-content: center;">READ PROMPT</button>
+
+<p id="story" style="text-align:center"></p>
+
+    <script>
+      var i = 0;
+      var txt = 'You go to run, but the creature is too fast, and grabs you before you get to the front door. You are no more.';
+      var speed = 50;
+            
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("story").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      </script>
+
+    <p style="text-align:center">
+      <a href="page1.html">TRY AGAIN</a>
+  </p>
+
+  </body>
+
+</html>

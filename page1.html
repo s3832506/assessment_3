@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Quiet Night In</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+  </head>
+
+<!--With the imagery featured throughout the website, I found a variety of stock and general photos online relating to each aspect of the story, which I then ran through a ASCII art generator that I found online. 
+  I thought about incorporating the text found in this art into the scripting of the code itself, but I ran into many issues adjusting the text to be suitable for this. 
+  I then decided to screenshot the generated text art and edit in Photoshop to be then added as images into the code.-->
+
+
+<!-- The aesthetic of the web design was an attempt to reflect the somewhat retro based designs that initially influenced me to pursue this idea, 
+     such as seen with websites such as goodbye.monster (Eugene An., Rook Liu, Beckett Rowan, and Matt Wang), and Museum of Screens (ToulouTouMou). 
+    These examples feature distinct retro-inspired designs with often a minimal but effective design that helps to give them an effective appeal to users..-->
+
+<!--This influence also effected the presentation of the storyline in terms of the scripting that was implemented, as seen with the typewriter script that is used when giving the prompts to the users.  
+      I feel given the somewhat slow nature of the revealing of the text helps to add to the horror style of the game.
+      This was also in part inspired by retro horror games such as those in the Resident Evil series (Capcom).-->
+
+<!--I did struggle with implementing audio like I initially wanted to into this web design, as I was wanting to use audio to create a sense of atmosphere within the game itself. 
+  One example I had in mind to implement was a background soundtrack using a stock song I found online. 
+  However, I struggled with implementing it without having the media player not be visible and automatically playing at the same time. 
+  Other instances I wanted to implement audio into were when the user would click buttons to progress the story. 
+  However in the end I decided to disregard this idea of implementing audio due to time constraints.-->
+
+  <body>
+
+    <img src="images/bedroom.png" width="50%" alt="bedroom" class="image">
+
+
+    <button onclick="typeWriter()" style="justify-content: center;">READ PROMPT</button>
+
+<p id="story" style="text-align:center"></p>
+
+    <script>
+      var i = 0;
+      var txt = 'You awaken from a deep sleep to hear a loud noise coming from downstairs.';
+      var speed = 50;
+            
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("story").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      </script>
+
+    <p style="text-align:center">
+      <a href="page2.html">INVESTIGATE THE NOISE</a>
+      <a href="page3.html">GO BACK TO BED</a>
+  </p>
+
+  </body>
+
+</html>
